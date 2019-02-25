@@ -53,7 +53,7 @@ export default class Danmu extends Component<any, IDanmuState> {
         }
     }
 
-    resolveAnimationFrame = (paramsNum?: number) => {
+    resolveAnimationFrame = (paramsNum?: string | undefined) => {
         if (!this.state.isPageVisible) {
             return;
         }
@@ -75,7 +75,7 @@ export default class Danmu extends Component<any, IDanmuState> {
 
                 if (activeItem !== undefined && activeItem.active) {
                     setTimeout(() => {
-                        this.resolveAnimationFrame(activeNum);
+                        this.resolveAnimationFrame(`${activeNum}`);
                     }, 6000);
 
                     if (this.activeNum >= this.state.list.length - 1) {
