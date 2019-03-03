@@ -59,16 +59,24 @@ export default class Danmu extends Component<any, IDanmuState> {
         this.setState({ containerWidth: update_width });
     }
 
-    resolveAnimationFrame = (paramsNum?: string | undefined) => {
-        if (!this.state.isPageVisible) {
+    resolveAnimationFrame = (paramsNum?: any) => {
+        if (this.state.list.length === 0) {
             return;
         }
 
-        // console.info('resolveAnimationFrame called', paramsNum);
+        if (!this.state.isPageVisible && paramsNum === undefined) {
+            // 页面不可见时，不可以开启新的弹幕
+            return;
+        }
 
         let activeNum = paramsNum || this.activeNum;
         let danmuList = this.state.list.slice();
         let danmuActiveItem: any = danmuList[activeNum];
+
+        if (danmuActiveItem.active && paramsNum === undefined) {
+            // 正在运行的弹幕不可以中断;
+            return;
+        }
 
         danmuActiveItem.active = !danmuActiveItem.active;
 
