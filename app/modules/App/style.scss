@@ -867,7 +867,11 @@
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
-            transition: linear all 5.5s;
+            transition: linear transform 5.5s;
+
+            &-enter {
+                display: block;
+            }
 
             &-enter-done {
                 transform: translate3d(-300px, 0, 0) !important;

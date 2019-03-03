@@ -41,16 +41,22 @@ export default class Danmu extends Component<any, IDanmuState> {
 
     componentDidMount() {
         this.getDanmuInfo();
-
+        window.addEventListener("resize", this.updateDimensions.bind(this));
         this.setState({
             containerWidth: this.wrapperRef.current!.offsetWidth
         });
     }
 
     componentWillUnmount() {
+        window.removeEventListener("resize", this.updateDimensions.bind(this));
         if (this.state.clock !== undefined) {
             clearInterval(this.state.clock);
         }
+    }
+
+    updateDimensions() {
+        let update_width  = window.innerWidth;
+        this.setState({ containerWidth: update_width });
     }
 
     resolveAnimationFrame = (paramsNum?: string | undefined) => {
@@ -119,6 +125,7 @@ export default class Danmu extends Component<any, IDanmuState> {
                                     key={`danmu-item-${animationIdx}`}
                                     in={animationItem.active}
                                     timeout={300}
+                                    unmountOnExit={true}
                                     classNames="sg-danmu-css-item">
                                     <div
                                         style={{
