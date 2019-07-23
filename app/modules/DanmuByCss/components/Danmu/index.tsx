@@ -41,20 +41,20 @@ export default class Danmu extends Component<any, IDanmuState> {
 
     componentDidMount() {
         this.getDanmuInfo();
-        window.addEventListener("resize", this.updateDimensions.bind(this));
+        window.addEventListener("resize", this.updateDimensions, false);
         this.setState({
             containerWidth: this.wrapperRef.current!.offsetWidth
         });
     }
 
     componentWillUnmount() {
-        window.removeEventListener("resize", this.updateDimensions.bind(this));
+        window.removeEventListener("resize", this.updateDimensions, false);
         if (this.state.clock !== undefined) {
             clearInterval(this.state.clock);
         }
     }
 
-    updateDimensions() {
+    updateDimensions = () => {
         let update_width  = window.innerWidth;
         this.setState({ containerWidth: update_width });
     }

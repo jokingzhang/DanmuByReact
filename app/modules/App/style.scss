@@ -37,6 +37,18 @@
         background: #f6f7f9;
         padding-bottom: 20px;
         user-select: none;
+        font-size: 16px;
+
+        @media screen and (min-width: 320px) {
+            font-size: 14px;
+        }
+        @media screen and (min-width: 375px) and (max-width:640px) {
+            font-size: 16px;
+        }
+        @media screen and (min-width: 641px) {
+            font-size: 20px;
+        }
+
 
         > .sg-card ~ .sg-card {
             margin: 15px;
@@ -59,7 +71,12 @@
 
     &-reason {
         padding: 0 30px;
-        font-size: 12px;
+        font-size: 0.75em;
+
+        @media (max-width: 320px) {
+            -webkit-transform: scale(0.75);
+                -o-transform: scale(1);
+        }
     }
 
     &-banner {
@@ -85,7 +102,7 @@
         h3 {
             font-weight: 700;
             font-family: PingFang-SC-Bold, 'SF Pro Text', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
-            font-size: 16px;
+            font-size: 1em;
             color: #1c1c1c;
             text-align: left;
             text-indent: $h3-icon-size + 6;
@@ -125,7 +142,12 @@
                 width: 100%;
                 padding-left: 53px;
                 padding-right: 10px;
-                font-size: 12px;
+                font-size: 0.75em;
+
+                @media (max-width: 320px) {
+                    -webkit-transform: scale(0.75);
+                -o-transform: scale(1);
+                }
             }
         }
 
@@ -141,13 +163,23 @@
         &-line {
             text-align: center;
             margin: 10px 0 10px;
-            font-size: 12px;
+            font-size: 0.75em;
+
+            @media (max-width: 320px) {
+                -webkit-transform: scale(0.75);
+                -o-transform: scale(1);
+            }
         }
 
         &-footer {
             text-align: center;
             margin-top: 15px;
-            font-size: 12px;
+            font-size: 0.75em;
+
+            @media (max-width: 320px) {
+                -webkit-transform: scale(0.75);
+                -o-transform: scale(1);
+            }
 
             &.footer-bottom-5 {
                 margin-bottom: 5px;
@@ -164,7 +196,12 @@
             right: 0px;
             color: #fff;
             padding: 7px 8px 7px 15px;
-            font-size: 12px;
+            font-size: 0.75em;
+
+            @media (max-width: 320px) {
+                -webkit-transform: scale(0.75);
+                -o-transform: scale(1);
+            }
             background-image: linear-gradient(45deg, #ffac00 0%, #ff7b00 100%);
             border-radius: 15px 0px 0px 15px;
             font-family: PingFang-SC-Bold, 'SF Pro Text', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
@@ -194,7 +231,12 @@
             width: 17px;
             height: 17px;
             border-radius: 50%;
-            font-size: 12px;
+            font-size: 0.75em;
+
+            @media (max-width: 320px) {
+                -webkit-transform: scale(0.75);
+                -o-transform: scale(1);
+            }
             transform: scale(0.75);
             -o-transform: scale(1);
             text-align: center;
@@ -282,7 +324,7 @@
 
             > li {
                 > a {
-                    font-size: 15px;
+                    font-size: 0.9375em;
                     border: none;
                     color: #1c1c1c;
 
@@ -379,7 +421,7 @@
                 max-width: 100%;
                 height: 72px;
                 line-height: 72px;
-                font-size: 22px;
+                font-size: 1.375em;
                 color: #fff;
                 margin: 0 auto;
                 background-repeat: no-repeat;
@@ -392,7 +434,7 @@
                     width: 80px;
                     height: 57px;
                     line-height: 57px;
-                    font-size: 18px;
+                    font-size: 1.125em;
                 }
             }
 
@@ -442,7 +484,12 @@
 
             &-title {
                 margin-top: 10px;
-                font-size: 12px;
+                font-size: 0.75em;
+
+                @media (max-width: 320px) {
+                    -webkit-transform: scale(0.75);
+                -o-transform: scale(1);
+                }
             }
         }
     }
@@ -457,7 +504,12 @@
 
         .table-head,
         .table-foot {
-            font-size: 12px;
+            font-size: 0.75em;
+
+            @media (max-width: 320px) {
+                -webkit-transform: scale(0.75);
+                -o-transform: scale(1);
+            }
             display: flex;
             .td,
             .th {
@@ -473,7 +525,12 @@
             &-empty {
                 padding: 60px 0;
                 text-align: center;
-                font-size: 12px;
+                font-size: 0.75em;
+
+                @media (max-width: 320px) {
+                    -webkit-transform: scale(0.75);
+                -o-transform: scale(1);
+                }
             }
 
             &.sg-table-close {
@@ -482,7 +539,7 @@
             .td,
             .th {
                 padding: 5px;
-                font-size: 11px;
+                font-size: 0.6875em;
             }
 
             .tr {
@@ -620,7 +677,7 @@
         border-radius: 41.5px;
         font-weight: 700;
         font-family: PingFang-SC-Bold, 'SF Pro Text', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
-        font-size: 18px;
+        font-size: 1.125em;
         border: none;
 
         &:hover,
@@ -637,7 +694,7 @@
             margin: 10px 0 5px;
             background-image: linear-gradient(45deg, #ffc700 0%, #ff7b00 100%);
             border-radius: 41.5px;
-            font-size: 15px;
+            font-size: 0.9375em;
             height: 30px;
             line-height: 30px;
             font-family: PingFang-SC-Bold, 'SF Pro Text', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
@@ -729,7 +786,7 @@
             height: 38px;
             line-height: 42px;
             color: #fff;
-            font-size: 14px;
+            font-size: 0.875em;
             margin-top: 37px;
             overflow: hidden;
             text-overflow: ellipsis;
@@ -773,12 +830,12 @@
         &-quit {
             h3 {
                 text-align: center;
-                font-size: 20px;
+                font-size: 1.25em;
                 padding: 20px 0;
                 margin-left: -10px;
             }
             p {
-                font-size: 14px;
+                font-size: 0.875em;
                 padding: 0 20px;
             }
         }
@@ -798,7 +855,12 @@
             top: 40px;
             display: block;
             color: #fff;
-            font-size: 12px;
+            font-size: 0.75em;
+
+            @media (max-width: 320px) {
+                -webkit-transform: scale(0.75);
+                -o-transform: scale(1);
+            }
             padding: 3px 13px;
             background: rgba(0, 0, 0, 0.26);
             border-radius: 4px;
@@ -860,7 +922,12 @@
             display: block;
             max-width: 300px;
             color: #fff;
-            font-size: 12px;
+            font-size: 0.75em;
+
+            @media (max-width: 320px) {
+                -webkit-transform: scale(0.75);
+                -o-transform: scale(1);
+            }
             padding: 3px 13px;
             background: rgba(0, 0, 0, 0.26);
             border-radius: 4px;
@@ -874,7 +941,7 @@
             }
 
             &-enter-done {
-                transform: translate3d(-300px, 0, 0) !important;
+                transform: translate3d(-100vw, 0, 0) !important;
             }
 
             &-exit {
@@ -952,7 +1019,12 @@
             display: block;
             max-width: 300px;
             color: #fff;
-            font-size: 12px;
+            font-size: 0.75em;
+
+            @media (max-width: 320px) {
+                -webkit-transform: scale(0.75);
+                -o-transform: scale(1);
+            }
             padding: 3px 13px;
             background: rgba(0, 0, 0, 0.26);
             border-radius: 4px;
